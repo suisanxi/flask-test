@@ -4,7 +4,7 @@
 # @Time: 2019/9/17 21:13
 # @File: __init__.py.py
 # @Software: PyCharm
-# desc:
+# desc:view构造函数
 from flasgger import Swagger
 from flask_restful import Api
 
@@ -12,6 +12,7 @@ from app.views.restViews import UserView
 from .views import blue
 
 def init_view(app):
+    #blueprint路由注册
     app.register_blueprint(blue)
 
     #swagger 启动

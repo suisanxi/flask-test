@@ -4,7 +4,7 @@
 # @Time: 2019/9/18 15:00
 # @File: __init__.py.py
 # @Software: PyCharm
-# desc:
+# desc:模型构造参数
 
 from flask_sqlalchemy import SQLAlchemy
 

@@ -7,22 +7,10 @@
 # desc:
 from app.models import db
 
-
-# class BaseClass(db.Model):
-#
-#     def save(self):
-#         db.session.add(self)
-#         db.session.commit()
-#         return self
-#
-#     def update(self,baseclass):
-#         baseclass  = baseclass.__dict__
-#         for k,v in baseclass:
-#             if v :
-#                 db.session.query(self).filter().update({k:v})
-#         db.session.commit()
-
 class User(db.Model):
+    #表名
+    __tablename__ = 'user'
+    db.Column()
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username = db.Column(db.String(14), nullable= False)
     psd = db.Column(db.String(256), nullable= False)
@@ -34,7 +22,5 @@ class User(db.Model):
     def __repr__(self):
         return '[username:{},psd:{}]'.format(self.username,self.psd)
 
-    def __str__(self):
-        return '[username:{},psd:{}]'.format(self.username,self.psd)
 
 

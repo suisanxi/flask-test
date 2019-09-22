@@ -4,12 +4,14 @@
 # @Time: 2019/9/19 9:01
 # @File: restViews.py
 # @Software: PyCharm
-# desc:restful api
+# desc:restful api+swagger接口编写
+from flask import Blueprint
 from flask_restful import Resource, fields, marshal_with
 from flask_restful.reqparse import RequestParser
 
 from app.models import db
 from app.models.models import User
+
 
 
 
@@ -32,6 +34,7 @@ result_simple = {
     'data': fields.Nested(user_fields)
 }
 parser = RequestParser()
+
 
 class UserView(Resource):
     @marshal_with(result)

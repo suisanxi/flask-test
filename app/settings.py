@@ -4,7 +4,7 @@
 # @Time: 2019/9/18 14:44
 # @File: settings.py
 # @Software: PyCharm
-# desc:
+# desc:数据库配置信息
 
 class baseConfig:
     DEBUG = False

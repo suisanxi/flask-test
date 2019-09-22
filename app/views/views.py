@@ -4,15 +4,8 @@
 # @Time: 2019/9/17 20:40
 # @File: views.py
 # @Software: PyCharm
-# desc:
+# desc:blueprint接口编写
 
-
-
-
-# def init_route(app):
-#     @app.route('/hello')
-#     def hello_world():
-#         return 'hello world'
 
 from flask import Blueprint
 
@@ -24,7 +17,7 @@ blue = Blueprint('blue',__name__)
 def index():
     return 'blue test'
 
-
+#创建数据库
 @blue.route('/creat')
 def creat():
     db.create_all()
